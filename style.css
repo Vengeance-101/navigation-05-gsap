@@ -1,0 +1,201 @@
+@font-face {
+  font-family: club;
+  src: url(./Clubbed\ to\ Life.otf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: club;
+  letter-spacing: 2px;
+  transition: all 300ms;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url(./img1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main-nav {
+  position: absolute;
+  padding: 20px 30px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.199);
+  color: white;
+  backdrop-filter: blur(10px);
+  font-size: 0.8rem;
+  font-weight: bolder;
+}
+.menu-btn {
+  cursor: pointer;
+}
+.container h1 {
+  font-size: 5.5rem;
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  color: white;
+  padding-inline: 30px;
+}
+/* overlay */
+.overlay-container {
+  position: fixed;
+  height: fit-content;
+  width: 100%;
+  background: #000000b9;
+  overflow: hidden;
+  transform: translateY(-100%);
+  backdrop-filter: blur(20px);
+}
+.overlay-container .overlay-nav {
+  padding: 20px 30px;
+  width: 100%;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  opacity: 0;
+}
+
+.overlay-section {
+  width: 100%;
+  display: flex;
+  padding: 0px 30px;
+}
+.overlay-video,
+.overlay-menu {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-direction: column;
+  padding-block: 3rem;
+}
+
+.overlay-video .video {
+  width: 50%;
+  height: 0px;
+  background: url(./overlay-img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.overlay-menu .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+}
+.overlay-menu .menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 30px;
+  color: white;
+}
+.overlay-menu-btn {
+  margin-top: 30px;
+  overflow: hidden;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid white;
+}
+.menu-link-btn {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 20px 20px;
+  overflow: hidden;
+}
+.menu-link-btn span {
+  color: white;
+  position: relative;
+  z-index: 9;
+  top: 0;
+  font-size: 0.7rem;
+  transition: all 300ms ease;
+}
+
+.menu-link-btn:hover span {
+  color: black;
+  font-weight: bolder;
+}
+.menu-link-btn:hover::after {
+  left: 0;
+}
+.menu-link-btn::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  top: 0%;
+  left: -100%;
+  z-index: 1;
+  transition: all 300ms ease;
+}
+
+.overlay-footer {
+  opacity: 0;
+  height: 40px;
+  width: 100%;
+  padding: 0px 30px;
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.company-slogan {
+  width: 50%;
+  display: flex;
+  align-self: center;
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.overlay-footer-contacts {
+  width: 50%;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+  }
+}
+.footer-span {
+  opacity: 0;
+  width: 100%;
+  padding: 0px 30px;
+  hr {
+    width: 100%;
+    height: 1px;
+    background-color: white;
+  }
+}
